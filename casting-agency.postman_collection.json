@@ -142,7 +142,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"title\": \"Natasha romanov\",\n\t\"release_date\": \"2020-05-06\"\n}"
+							"raw": "{\n\t\"title\": \"A Quiet Place 3\",\n\t\"release_date\": \"2020-11-06\"\n}"
 						},
 						"url": {
 							"raw": "{{host}}/movies",
@@ -180,7 +180,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"name\": \"Mary\",\r\n\t\"age\": 22,\r\n\t\"gender\": \"female\"\r\n}\r\n"
+							"raw": "{\r\n\t\"name\": \"Vijay\",\r\n\t\"age\": 42,\r\n\t\"gender\": \"male\"\r\n}\r\n"
 						},
 						"url": {
 							"raw": "{{host}}/actors",
@@ -218,7 +218,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"title\": \"Natasha romanov patched\",\n\t\"release_date\": \"2020-05-06\"\n}"
+							"raw": "{\n\t\"title\": \"A Quiet Place 3 patched\",\n\t\"release_date\": \"2020-11-06\"\n}"
 						},
 						"url": {
 							"raw": "{{host}}/movies/3",
@@ -257,7 +257,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"name\": \"John\",\r\n\t\"age\": 22,\r\n\t\"gender\": \"female\"\r\n}\r\n"
+							"raw": "{\r\n\t\"name\": \"Vijay\",\r\n\t\"age\": 42,\r\n\t\"gender\": \"male\"\r\n}\r\n"
 						},
 						"url": {
 							"raw": "{{host}}/actors/3",
@@ -522,7 +522,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"title\": \"Natasha romanov\",\n\t\"release_date\": \"2020-05-06\"\n}"
+							"raw": "{\n\t\"title\": \"A Quiet Place\",\n\t\"release_date\": \"2020-11-06\"\n}"
 						},
 						"url": {
 							"raw": "{{host}}/movies",
@@ -560,7 +560,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"name\": \"Mary\",\r\n\t\"age\": 22,\r\n\t\"gender\": \"female\"\r\n}\r\n"
+							"raw": "{\r\n\t\"name\": \"Vijay\",\r\n\t\"age\": 42,\r\n\t\"gender\": \"male\"\r\n}\r\n"
 						},
 						"url": {
 							"raw": "{{host}}/actors",
@@ -598,7 +598,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"title\": \"Natasha romanov patched\",\n\t\"release_date\": \"2020-05-06\"\n}"
+							"raw": "{\n\t\"title\": \"A Quiet Place 3 patched\",\n\t\"release_date\": \"2020-11-06\"\n}"
 						},
 						"url": {
 							"raw": "{{host}}/movies/3",
@@ -637,7 +637,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"name\": \"John\",\r\n\t\"age\": 22,\r\n\t\"gender\": \"female\"\r\n}\r\n"
+							"raw": "{\r\n\t\"name\": \"Vijay\",\r\n\t\"age\": 42,\r\n\t\"gender\": \"male\"\r\n}\r\n"
 						},
 						"url": {
 							"raw": "{{host}}/actors/3",
@@ -902,7 +902,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"title\": \"Natasha romanov\",\n\t\"release_date\": \"2020-05-06\"\n}"
+							"raw": "{\n\t\"title\": \"A Quiet Place 3\",\n\t\"release_date\": \"2020-11-06\"\n}"
 						},
 						"url": {
 							"raw": "{{host}}/movies",
@@ -940,7 +940,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"name\": \"Mary\",\r\n\t\"age\": 22,\r\n\t\"gender\": \"female\"\r\n}\r\n"
+							"raw": "{\r\n\t\"name\": \"Vijay\",\r\n\t\"age\": 42,\r\n\t\"gender\": \"male\"\r\n}\r\n"
 						},
 						"url": {
 							"raw": "{{host}}/actors",
