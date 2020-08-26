@@ -1,0 +1,31 @@
+CREATE TABLE public.movies (
+  movie_id serial NOT NULL,
+  movie_title text NOT NULL,
+  movie_release_date text NOT NULL
+);
+
+CREATE TABLE public.actors (
+  actor_id serial NOT NULL,
+  actor_name text NOT NULL,
+  actor_age integer NOT NULL,
+  actor_gender text NOT NULL
+
+);
+
+INSERT INTO movies (movie_id, movie_title, movie_release_date) VALUES (1, 'Invisible man 2', 'June 23, 2021' );
+INSERT INTO movies (movie_id, movie_title, movie_release_date) VALUES (2, 'A family man 2', 'March 31, 2021');
+INSERT INTO movies (movie_id, movie_title, movie_release_date) VALUES (3, 'Peter Rabbit 3', 'August 4, 2021');
+INSERT INTO movies (movie_id, movie_title, movie_release_date) VALUES (4, 'Birdbox 2', 'March 17, 2021');
+INSERT INTO movies (movie_id, movie_title, movie_release_date) VALUES (5, 'Dangerous Lies 2', 'January 21, 2021');
+INSERT INTO movies (movie_id, movie_title, movie_release_date) VALUES (6, 'Deadpool 3','January 21, 2021');
+INSERT INTO movies (movie_id, movie_title, movie_release_date) VALUES (7, 'Room 2','January 21, 2021');
+INSERT INTO movies (movie_id, movie_title, movie_release_date) VALUES (8, 'The gift 2','January 21, 2021');
+INSERT INTO movies (movie_id, movie_title, movie_release_date) VALUES (9, 'Hold the dark 2','January 21, 2021');
+INSERT INTO movies (movie_id, movie_title, movie_release_date) VALUES (10, 'Mowgli 2','January 21, 2021');
+
+INSERT INTO actors (actor_id, actor_name, actor_age, actor_gender) VALUES (1, 'Robert Pattinson', 33, 'male');
+INSERT INTO actors (actor_id, actor_name, actor_age, actor_gender) VALUES (2, 'Andy Serkis', 55, 'male');
+INSERT INTO actors (actor_id, actor_name, actor_age, actor_gender) VALUES (3, 'Zoë Kravitz', 31, 'female');
+INSERT INTO actors (actor_id, actor_name, actor_age, actor_gender) VALUES (4, 'Colin Farrell', 43, 'male');
+INSERT INTO actors (actor_id, actor_name, actor_age, actor_gender) VALUES (5, 'Paul Dano', 35, 'male');
+INSERT INTO actors (actor_id, actor_name, actor_age, actor_gender) VALUES (6, 'Peter Sarsgaard', 49, 'male');
