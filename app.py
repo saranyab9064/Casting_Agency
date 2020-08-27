@@ -1,7 +1,7 @@
 
 from flask import Flask, request, abort, jsonify
 from flask_sqlalchemy import SQLAlchemy
-from auth import AuthError, requires_auth,AUTH0_DOMAIN, AUTH0_CALLBACK_URL,AUTH0_CLIENT_ID
+from auth import AuthError, requires_auth
 from flask_cors import CORS
 from models import setup_db,Movie,Actor,db
 from auth import API_AUDIENCE, AUTH0_CALLBACK_URL, AUTH0_CLIENT_ID
@@ -16,8 +16,15 @@ AUTH0_CALLBACK_URL = "http://localhost:8100"
 def create_app(test_config=None):
     app = Flask(__name__)
     setup_db(app)
-    CORS(app)
+    # Reference from the Udacity lesson "flask-cors"
+    #   CORS(app)
+    CORS(app, resources={"/": {"origins": "*"}})
 
+    @app.after_request
+    def after_request(response):
+       response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization,true')
+       response.headers.add('Access-Control-Allow-Methods', 'GET,PATCH,POST,DELETE,OPTIONS')
+       return response
 
     @app.route('/authorization/url',methods=['GET'])
     def generate_auth_url():
@@ -34,29 +41,31 @@ def create_app(test_config=None):
     # Default End Points
     @app.route('/')
     def home_page():
+        print("am with default")
         return 'Welcome to the Capstone Casting Agency Project'
 
 
     # API Route - Movie
     @app.route('/movies', methods=['GET'])
-    @requires_auth('get:movies')
-    def get_to_list_movies(token):
+    def get_to_list_movies():
         """
         Query all movies list
         """
         movies_list = Movie.query.all()
+        print(movies_list)
         response = {
             'success': True,
             'status_code': 200,
             'movies': [i.format() for i in movies_list]
         }
+        print("am here")
         result = jsonify(response)
         return result
 
 
     @app.route('/movies/<movie_id>', methods=['GET'])
     @requires_auth('get:movies/<movie_id>')
-    def filter_movie_by_id(token, movie_id):
+    def filter_movie_by_id(data, movie_id):
         """
         Filter movie based on  id
         """
@@ -75,7 +84,7 @@ def create_app(test_config=None):
 
     @app.route('/movies', methods=['POST'])
     @requires_auth('post:movies')
-    def add_movie(token):
+    def add_movie(data):
         """
         Add movie to the list
         """
@@ -101,7 +110,7 @@ def create_app(test_config=None):
 
     @app.route('/movies/<movie_id>', methods=['PATCH'])
     @requires_auth('patch:movies/<movie_id>')
-    def update_movie(token, movie_id):
+    def update_movie(data, movie_id):
         """
         Post movie to the list
         """
@@ -130,7 +139,7 @@ def create_app(test_config=None):
 
     @app.route('/movies/<movie_id>', methods=['DELETE'])
     @requires_auth('delete:movies/<movie_id>')
-    def movie_del(token, movie_id):
+    def movie_del(data, movie_id):
         """
         Delete movie from the movie list
         """
@@ -154,7 +163,7 @@ def create_app(test_config=None):
     # Route - Actors
     @app.route('/actors', methods=['GET'])
     @requires_auth('get:actors')
-    def get_to_list_actors(token):
+    def get_to_list_actors(data):
         """
         Query to fetch all actors list
         """
@@ -170,7 +179,7 @@ def create_app(test_config=None):
 
     @app.route('/actors/<actor_id>', methods=['GET'])
     @requires_auth('get:actors/<actor_id>')
-    def filter_actor_by_id(token, actor_id):
+    def filter_actor_by_id(data, actor_id):
         """
         Filter actor based on id
         """
@@ -189,7 +198,7 @@ def create_app(test_config=None):
 
     @app.route('/actors', methods=['POST'])
     @requires_auth('post:actors')
-    def add_actors(token):
+    def add_actors(data):
         """
         Add actor to the list
         """
@@ -218,7 +227,7 @@ def create_app(test_config=None):
 
     @app.route('/actors/<actor_id>', methods=['PATCH'])
     @requires_auth('patch:actors/<actor_id>')
-    def update_actors(token, actor_id):
+    def update_actors(data, actor_id):
         """
         Update actor to the list
         """
@@ -248,7 +257,7 @@ def create_app(test_config=None):
 
     @app.route('/actors/<actor_id>', methods=['DELETE'])
     @requires_auth('delete:actors/<actor_id>')
-    def actor_del(token, actor_id):
+    def actor_del(data, actor_id):
         """
         Delete actor from the actors list
         """
@@ -356,5 +365,16 @@ def create_app(test_config=None):
     return app
 APP = create_app()
 
+#----------------------------------------------------------------------------#
+# Launch.
+#----------------------------------------------------------------------------#
+# Default port:
 if __name__ == '__main__':
-    APP.run(host='0.0.0.0', port=8080, debug=True)
+    APP.run()
+
+# Or specify port manually:
+'''
+if __name__ == '__main__':
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
+'''
