@@ -47,6 +47,7 @@ def create_app(test_config=None):
 
     # API Route - Movie
     @app.route('/movies', methods=['GET'])
+    @requires_auth('get:movies')
     def get_to_list_movies():
         """
         Query all movies list
