@@ -12,20 +12,18 @@ CREATE TABLE public.actors (
 
 );
 
-INSERT INTO movies (movie_id, movie_title, movie_release_date) VALUES (1, 'Invisible man 2', 'June 23, 2021' );
-INSERT INTO movies (movie_id, movie_title, movie_release_date) VALUES (2, 'A family man 2', 'March 31, 2021');
-INSERT INTO movies (movie_id, movie_title, movie_release_date) VALUES (3, 'Peter Rabbit 3', 'August 4, 2021');
-INSERT INTO movies (movie_id, movie_title, movie_release_date) VALUES (4, 'Birdbox 2', 'March 17, 2021');
-INSERT INTO movies (movie_id, movie_title, movie_release_date) VALUES (5, 'Dangerous Lies 2', 'January 21, 2021');
-INSERT INTO movies (movie_id, movie_title, movie_release_date) VALUES (6, 'Deadpool 3','January 21, 2021');
-INSERT INTO movies (movie_id, movie_title, movie_release_date) VALUES (7, 'Room 2','January 21, 2021');
+INSERT INTO movies (movie_id, movie_title, movie_release_date) VALUES (1, 'The Matrix 4', 'June 23, 2022' );
+INSERT INTO movies (movie_id, movie_title, movie_release_date) VALUES (2, 'The Flash ', 'March 31, 2022');
+INSERT INTO movies (movie_id, movie_title, movie_release_date) VALUES (3, 'Peter Rabbit 2', 'January 24, 2021');
+INSERT INTO movies (movie_id, movie_title, movie_release_date) VALUES (4, 'Avatar 2', 'March 17, 2022');
+INSERT INTO movies (movie_id, movie_title, movie_release_date) VALUES (5, 'The Spongebob Movie: Sponge on the Run', 'December 31, 2021');
+INSERT INTO movies (movie_id, movie_title, movie_release_date) VALUES (6, 'Cruella','May 28, 2021');
+INSERT INTO movies (movie_id, movie_title, movie_release_date) VALUES (7, 'Aquaman 2','April 21, 2022');
 INSERT INTO movies (movie_id, movie_title, movie_release_date) VALUES (8, 'The gift 2','January 21, 2021');
-INSERT INTO movies (movie_id, movie_title, movie_release_date) VALUES (9, 'Hold the dark 2','January 21, 2021');
-INSERT INTO movies (movie_id, movie_title, movie_release_date) VALUES (10, 'Mowgli 2','January 21, 2021');
+INSERT INTO movies (movie_id, movie_title, movie_release_date) VALUES (9, 'Space Jam: A New Legacy','July 16, 2021');
+INSERT INTO movies (movie_id, movie_title, movie_release_date) VALUES (10, 'The Batman','January 21, 2021');
 
-INSERT INTO actors (actor_id, actor_name, actor_age, actor_gender) VALUES (1, 'Robert Pattinson', 33, 'male');
-INSERT INTO actors (actor_id, actor_name, actor_age, actor_gender) VALUES (2, 'Andy Serkis', 55, 'male');
-INSERT INTO actors (actor_id, actor_name, actor_age, actor_gender) VALUES (3, 'Zoë Kravitz', 31, 'female');
-INSERT INTO actors (actor_id, actor_name, actor_age, actor_gender) VALUES (4, 'Colin Farrell', 43, 'male');
-INSERT INTO actors (actor_id, actor_name, actor_age, actor_gender) VALUES (5, 'Paul Dano', 35, 'male');
-INSERT INTO actors (actor_id, actor_name, actor_age, actor_gender) VALUES (6, 'Peter Sarsgaard', 49, 'male');
+INSERT INTO actors (actor_id, actor_name, actor_age, actor_gender) VALUES (1, 'John Krasinski', 40, 'male');
+INSERT INTO actors (actor_id, actor_name, actor_age, actor_gender) VALUES (2, 'Emily Blunt', 37, 'female');
+INSERT INTO actors (actor_id, actor_name, actor_age, actor_gender) VALUES (3, 'Tom Cruise', 58, 'female');
+INSERT INTO actors (actor_id, actor_name, actor_age, actor_gender) VALUES (4, 'Michael C. Hall', 49, 'male');
